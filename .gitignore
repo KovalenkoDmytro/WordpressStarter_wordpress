@@ -1,0 +1,15 @@
+/.github
+/dist/*
+!/dist/.gitkeep
+/node_modules
+/package-lock.json
+/composer.lock
+.DS_Store
+*.log
+/.srv/*
+*.env
+/.idea/*
+!/custom.ini
+/.htaccess.php
+app/plugin
+app/plugins/dk/node_modules
