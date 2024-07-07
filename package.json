@@ -5,6 +5,9 @@
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
+  "stylelint": {
+    "extends": "@wordpress/stylelint-config/scss"
+  },
   "dependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
@@ -26,6 +29,7 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "@wordpress/eslint-plugin": "^19.2.0"
+    "@wordpress/eslint-plugin": "^19.2.0",
+    "@wordpress/stylelint-config": "^22.2.0"
   }
 }

@@ -20,6 +20,9 @@
 	},
 	"author": "",
 	"license": "ISC",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
 	"devDependencies": {
 		"@wordpress/scripts": "^25.5.1"
 	},
