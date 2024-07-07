@@ -1,0 +1,21 @@
+
+.btn{
+  display: block;
+
+  color: $button_violet_text_color;
+  background-color: $button_violet_color;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  width: max-content;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.6px;
+  @include transition();
+  &:hover{
+    background-color: $button_lime_color;
+    color: #000000;
+  }
+
+}
