@@ -1,15 +1,10 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps } from '@wordpress/block-editor';
-import "./style.scss";
-import "./editor.scss";
+import "./style/style.scss";
+import Edit from "./js/edit";
+import Save from "./js/save";
+
 
 registerBlockType( 'genius/myblock', {
-	edit: function () {
-		const blockProps = useBlockProps();
-		return <h1 {...blockProps}>Edit 6</h1>;
-	},
-	save: function () {
-		const blockProps = useBlockProps.save();
-		return <h1 {...blockProps}>Save 2</h1>;
-	},
+	edit: Edit,
+	save: Save,
 } );

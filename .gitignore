@@ -12,4 +12,4 @@
 !/custom.ini
 /.htaccess.php
 app/plugin
-app/plugins/dk/node_modules
+app/plugins/myblock/node_modules
