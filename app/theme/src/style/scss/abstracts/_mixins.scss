@@ -1,56 +1,66 @@
-@mixin mobile{
-  @media (min-width: 360px){
-    @content
-  }
+@import "variables";
+
+@mixin mobile {
+
+	@media (min-width: 360px) {
+		@content;
+	}
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
-    @content
-  }
+
+	@media (min-width: 768px) {
+		@content;
+	}
+
 }
 
 @mixin laptop {
-  @media (min-width: 1366px) {
-    @content
-  }
+
+	@media (min-width: 1366px) {
+		@content;
+	}
 }
 
 @mixin desktop {
-  @media (min-width: 1536px) {
-    @content
-  }
+
+	@media (min-width: 1536px) {
+		@content;
+	}
 }
 
 @mixin largeScreen {
-  @media (min-width: 1920px) {
-    @content
-  }
+
+	@media (min-width: 1920px) {
+		@content;
+	}
 }
 
-@mixin transition{
-  transition: all .5s;
+@mixin transition {
+	transition: all 0.5s;
 }
 
-@mixin border{
-  border: 1px solid $border_color;
+@mixin border {
+	border: 1px solid $border_color;
 }
 
-@mixin scrollbar($color : #c6c6c6){
-  // For Chrome & Safari
-  &::-webkit-scrollbar {
-    width:  5px;
-    height:  5px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: $color;
-  }
-  &::-webkit-scrollbar-track {
-    background: #c6c6c6;
-  }
-  // Standard version (Firefox only for now)
-  -ms-overflow-style: auto;
-  scrollbar-color: $color  transparent;
-  scrollbar-width: thin;
+@mixin scrollbar($color : #c6c6c6) {
+	// For Chrome & Safari
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $color;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #c6c6c6;
+	}
+	// Standard version (Firefox only for now)
+	-ms-overflow-style: auto;
+	scrollbar-color: $color  transparent;
+	scrollbar-width: thin;
 }
 
