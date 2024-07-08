@@ -6,7 +6,8 @@ import {fixupConfigRules} from "@eslint/compat";
 
 export default [
     {
-        files: ["**/*.{js,mjs,cjs,jsx}"]
+        files: ["**/*.{js,mjs,cjs,jsx}"],
+        ignores: ["/*.config.js"],
     },
     {
         languageOptions: {
