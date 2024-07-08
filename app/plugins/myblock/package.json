@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Gutenberg block",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"build": "wp-scripts build",
 		"check-engines": "wp-scripts check-engines",
@@ -20,9 +21,6 @@
 	},
 	"author": "",
 	"license": "ISC",
-	"stylelint": {
-		"extends": "@wordpress/stylelint-config/scss"
-	},
 	"devDependencies": {
 		"@wordpress/scripts": "^25.5.1"
 	},

@@ -3,5 +3,6 @@ import {__} from "@wordpress/i18n";
 
 export default function Save() {
 	const blockProps = useBlockProps.save();
-	return <h1 {...blockProps}>{__('Save block')}</h1>;
+	return <p {...blockProps}>{__('Save block')}</p>;
 }
+
