@@ -10,7 +10,7 @@ const outputPath = "./app/theme/public/";
 const localDomain = "http://localhost:8080/";
 
 module.exports = {
-    entry: [baseUrl + "scss/main.scss"],
+    entry: [baseUrl + "style/scss/main.scss", baseUrl + "js/main.js"],
     output: {
         path: path.resolve(__dirname, outputPath),
         filename: "app.js",
@@ -41,7 +41,6 @@ module.exports = {
                                     return [require('autoprefixer')]
                                 }
                             }
-
                         }
                     },
                     {

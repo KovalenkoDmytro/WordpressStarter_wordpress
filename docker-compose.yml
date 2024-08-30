@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: '${WORDPRESS_DB_PASSWORD}'
 
   wordpress:
-    image: wordpress:latest
+    image: wordpress:6.6.1-php8.1-apache
     depends_on:
       - mysql
     links:

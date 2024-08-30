@@ -1,37 +1,32 @@
 @import "variables";
 
 @mixin mobile {
-
-	@media (min-width: 360px) {
+	@media (width >= 360px) {
 		@content;
 	}
 }
 
 @mixin tablet {
-
-	@media (min-width: 768px) {
+	@media (width >= 768px) {
 		@content;
 	}
 
 }
 
 @mixin laptop {
-
-	@media (min-width: 1366px) {
+	@media (width >= 1366px) {
 		@content;
 	}
 }
 
 @mixin desktop {
-
-	@media (min-width: 1536px) {
+	@media (width >= 1536px) {
 		@content;
 	}
 }
 
 @mixin largeScreen {
-
-	@media (min-width: 1920px) {
+	@media (width >= 1920px) {
 		@content;
 	}
 }
@@ -58,6 +53,7 @@
 	&::-webkit-scrollbar-track {
 		background: #c6c6c6;
 	}
+
 	// Standard version (Firefox only for now)
 	-ms-overflow-style: auto;
 	scrollbar-color: $color  transparent;
