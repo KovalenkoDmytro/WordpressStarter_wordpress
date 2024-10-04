@@ -207,14 +207,14 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
                         'default' => 'Jon Smith',
                         'label_block' => true,
                     ],
-//                    [
-//                        'name' => 'avatar_url',
-//                        'label' => 'link to avatar',
-//                        'type' => \Elementor\Controls_Manager::TEXT,
-//                        'placeholder' => '',
-//                        'default' => '',
-//                        'label_block' => true,
-//                    ],
+                    [
+                        'name' => 'avatar_url',
+                        'label' => 'link to avatar',
+                        'type' => \Elementor\Controls_Manager::TEXT,
+                        'placeholder' => '',
+                        'default' => '',
+                        'label_block' => true,
+                    ],
                     [
                         'name' => 'link',
                         'label' => 'Author Initial',
@@ -333,12 +333,11 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
                          <div class="user-container">
                              <div class="user">
 
-
-<!--                                --><?php //if (!empty($item['url'])) : ?>
-<!--                                    <img class="avatar" src="--><?php //=$item['url']?><!--" alt="--><?php //= $item['text']; ?><!--" height="40px" width="40px">-->
-<!--                                --><?//else :?>
-<!--                                    <div class="initial">--><?php //= $item['link']; ?><!--</div>-->
-<!--                                --><?//endif;?>
+                                <?php if (!empty($item['avatar_url'])) : ?>
+                                    <img class="avatar" src="<?=$item['avatar_url']?>" alt="<?= $item['text']; ?>" height="40px" width="40px">
+                                <?else :?>
+                                    <div class="initial"><?= $item['link']; ?></div>
+                                <?endif;?>
 
                                  <div class="user-info">
                                      <p class="name"><?= $item['text']; ?></p>
@@ -405,13 +404,11 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
 
                     <div class="user-container">
                         <div class="user">
-
-
-<!--                            <# if(item.url.length > 0) {#>-->
-<!--                            <img class="avatar" src="{{{ item.url }}}" alt="{{{ item.text }}}" height="40px" width="40px"/>-->
-<!--                            <#} else #>-->
-                            <div class="initial">{{{ item.link }}}</div>
-
+                            <# if (item.avatar_url.length) { #>
+                                <img class="avatar" src="{{{ item.avatar_url }}}" alt="{{{ item.text }}}" height="40px" width="40px">
+                            <# } else {#>
+                                <div class="initial">{{{ item.link }}}</div>
+                            <# }#>
 
                             <div class="user-info">
                                 <p class="name">{{{ item.text }}}</p>
