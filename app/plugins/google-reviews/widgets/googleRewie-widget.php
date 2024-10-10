@@ -19,13 +19,9 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
 
         wp_enqueue_style('slick', plugin_dir_url( __FILE__ ) . '../assets/style/slick.css');
         wp_enqueue_style('google-review-css', plugin_dir_url( __FILE__ ) . '../assets/style/google-review-widget-style.css');
-        wp_enqueue_script('slick', plugin_dir_url( __FILE__ ) . '../assets/js/library/slickSlider.js', null, '1.0.0', true);
-        wp_enqueue_script('main', plugin_dir_url(__FILE__) . '../assets/js/google-review-widget-script.min.js', [ 'elementor-frontend', 'slick' ], '1.0.0', true );
+        wp_enqueue_script('slick', plugin_dir_url( __FILE__ ) . '../assets/js/library/slickSlider.js', [ 'jquery'], null, true);
+        wp_enqueue_script('main', plugin_dir_url(__FILE__) . '../assets/js/google-review-widget-script.min.js', [ 'jquery','slick'], null, true );
     }
-
-//    protected function is_dynamic_content(): bool {
-//        return false;
-//    }
 
     /**
      * Get widget name.
@@ -111,7 +107,7 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
      */
     public function get_style_depends(): array
     {
-        return ['general-style'];
+        return [ 'slick', 'google-review-css' ];
     }
 
     /**
@@ -125,7 +121,7 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
      */
     public function get_script_depends(): array
     {
-        return ['general-script'];
+        return [ 'main','slick'];
     }
 
 
@@ -335,9 +331,9 @@ class Essential_Elementor_Google_Review_Widget extends \Elementor\Widget_Base {
 
                                 <?php if (!empty($item['avatar_url'])) : ?>
                                     <img class="avatar" src="<?=$item['avatar_url']?>" alt="<?= $item['text']; ?>" height="40px" width="40px">
-                                <?else :?>
+                                <?php else:?>
                                     <div class="initial"><?= $item['link']; ?></div>
-                                <?endif;?>
+                                <?php endif?>
 
                                  <div class="user-info">
                                      <p class="name"><?= $item['text']; ?></p>

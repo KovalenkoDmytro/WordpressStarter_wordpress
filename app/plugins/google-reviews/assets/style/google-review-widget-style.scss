@@ -103,14 +103,14 @@
       align-content: center;
       align-items: start;
       justify-content: center;
-      margin-top: 20px;
+      margin: 20px 0;
       padding: 0;
 
       li {
         width: 16px;
         height: 3px;
         position: relative;
-        display: flex;
+        display: block;
         background-color: #CCCCCC59;
 
         &:first-child {
@@ -135,6 +135,7 @@
           border: none;
           font-size: 0;
           border-radius: 0;
+          display: none;
 
           &:focus {
             outline: none;
@@ -224,11 +225,10 @@
         text-overflow: ellipsis;
         overflow: hidden;
         line-height: 21.75px;
-        height: 110px;
         font-size: 15px;
         padding: 0;
         display: -webkit-box;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
       }
     }
@@ -242,10 +242,11 @@
       border: none;
       padding: 0;
       z-index: 2;
-      background: transparent;
+
 
       &.--next {
         right: 0;
+        background: transparent;
 
         &:before {
           top: 8px;
@@ -277,6 +278,7 @@
 
       &.--prev {
         left: 0;
+        background: transparent;
 
         &:before {
           top: 18px;

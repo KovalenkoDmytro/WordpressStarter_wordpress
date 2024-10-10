@@ -18,8 +18,6 @@ jQuery( window ).on( 'elementor/frontend/init', () => {
                     slidesToShow: 3,
                     dots: false,
                     arrows: true,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
                 }
             },
             {
@@ -28,16 +26,12 @@ jQuery( window ).on( 'elementor/frontend/init', () => {
                     slidesToShow: 2,
                     dots: false,
                     arrows: true,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    autoplay: true,
                     slidesToShow: 2,
-                    autoplaySpeed: 2000,
                 }
             },
         ]
